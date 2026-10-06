@@ -104,7 +104,7 @@
       padding: 40px 20px;
     }
 
-    .features-section h2 {
+    .features-section h2, .gallery-section h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5rem;
       margin-bottom: 30px;
@@ -133,6 +133,41 @@
     .card h3 {
       font-size: 1.1rem;
       margin-bottom: 10px;
+      color: var(--dark-green);
+    }
+
+    /* --- NUEVA SECCIÓN DE GALERÍA DE TRABAJOS --- */
+    .gallery-section {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background-color: var(--card-bg);
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .gallery-item img, .gallery-item video {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item p {
+      padding: 15px;
+      font-size: 0.95rem;
+      font-weight: 500;
       color: var(--dark-green);
     }
 
@@ -207,16 +242,39 @@
       </div>
     </section>
 
+    <!-- ==================== SECCIÓN DE GALERÍA / TRABAJOS ==================== -->
+    <section class="gallery-section">
+      <h2>Nuestros Trabajos</h2>
+      <div class="gallery-grid">
+        
+        <!-- ELEMENTO 1: FOTO -->
+        <div class="gallery-item">
+          <!-- Reemplazá 'tu_foto1.jpg' por el nombre o link de tu foto -->
+          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=800" alt="Revestimiento de piscina">
+          <p>Revestimiento celeste Cancún</p>
+        </div>
+
+        <!-- ELEMENTO 2: FOTO -->
+        <div class="gallery-item">
+          <!-- Reemplazá 'tu_foto2.jpg' por el nombre o link de tu foto -->
+          <img src="https://images.unsplash.com/photo-1562778612-e1e0cda9915c?q=80&w=800" alt="Piscina terminada">
+          <p>Listo para el pulido</p>
+        </div>
+
+        <!-- ELEMENTO 3: VIDEO -->
+        <div class="gallery-item">
+          <!-- Reemplazá 'tu_video.mp4' por el archivo o link de tu video -->
+          <video controls poster="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=800">
+            <source src="tu_video.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <p>Proceso de pulido y acabado</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- ====================================================================== -->
+
     <section class="cta-container">
       <h2>Transformá tu piscina hoy</h2>
-      <p>Asesoramiento personalizado y presupuestos sin cargo</p>
-      <a href="https://wa.me/543487589652" class="btn-wp" target="_blank">WhatsApp: 3487 589652</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Z.R Piscinas — Construcción & Revestimiento</p>
-  </footer>
-
-</body>
-</html>
+      <p>Asesoramiento personalizado y presup
