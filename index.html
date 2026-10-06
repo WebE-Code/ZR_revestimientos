@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z.R Piscinas | Revestimiento & Construcción</title>
+  <!-- Fuentes elegantes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #f5f4ef;
+      --card-bg: #e8e6df;
+      --accent-turq: #5edcdb;
+      --dark-green: #3a473f;
+      --text-dark: #2b2b2b;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 30px;
+      margin-bottom: 30px;
+    }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--text-dark);
+    }
+
+    .btn-contact {
+      background-color: var(--dark-green);
+      color: var(--white);
+      padding: 10px 22px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      opacity: 0.9;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+                  url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1200&auto=format&fit=crop') center/cover;
+      height: 70vh;
+      border-radius: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--white);
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.8rem;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      max-width: 600px;
+      margin-bottom: 25px;
+    }
+
+    /* Sección Características */
+    .features-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .features-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 30px 20px;
+      border-radius: 25px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--dark-green);
+    }
+
+    /* Sección WhatsApp / Cierre */
+    .cta-container {
+      background-color: var(--dark-green);
+      color: var(--white);
+      border-radius: 30px;
+      padding: 50px 20px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .cta-container h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-wp {
+      display: inline-block;
+      background-color: var(--accent-turq);
+      color: var(--text-dark);
+      padding: 14px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-text">Z.R PISCINAS</div>
+    <a href="https://wa.me/543487589652" class="btn-contact" target="_blank">Contacto</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Z.R Piscinas</h1>
+      <p>Revestimiento de mármol pulido para el interior de piscinas</p>
+      <a href="https://wa.me/543487589652" class="btn-wp" target="_blank">Consultar Presupuesto</a>
+    </section>
+
+    <section class="features-section">
+      <h2>¿Por qué elegir Z.R?</h2>
+      <div class="grid-cards">
+        <div class="card">
+          <h3>Larga Durabilidad</h3>
+          <p>Materiales resistentes diseñados para el agua y el sol.</p>
+        </div>
+        <div class="card">
+          <h3>Fácil Aplicado</h3>
+          <p>Técnica eficiente para renovar o construir tu piscina.</p>
+        </div>
+        <div class="card">
+          <h3>Sin Juntas</h3>
+          <p>Superficie continua, suave al tacto y sin uniones molestas.</p>
+        </div>
+        <div class="card">
+          <h3>Mármol Pulido</h3>
+          <p>Acabado estético y sofisticado de alta gama.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-container">
+      <h2>Transformá tu piscina hoy</h2>
+      <p>Asesoramiento personalizado y presupuestos sin cargo</p>
+      <a href="https://wa.me/543487589652" class="btn-wp" target="_blank">WhatsApp: 3487 589652</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Z.R Piscinas — Construcción & Revestimiento</p>
+  </footer>
+
+</body>
+</html>
