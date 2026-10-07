@@ -173,7 +173,7 @@
       text-align: center;
     }
 
-    /* Grilla con 3 fotos + 1 video */
+    /* Grilla con 1 video primero + 3 fotos */
     .work-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -345,23 +345,30 @@
     <section class="how-we-work-section">
       <h2>¿Cómo trabajamos?</h2>
       
-      <!-- 1. GRILLA CON 3 FOTOS Y 1 VIDEO -->
-     <div class="work-item">
+      <!-- 1. GRILLA CON VIDEO PRIMERO Y LUEGO 3 FOTOS -->
+      <div class="work-grid">
+        <!-- VIDEO (PRIMERO) -->
+        <div class="work-item">
           <video controls poster="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=800">
             <source src="video_muestra.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
           </video>
           <p>Muestra de avance en obra</p>
         </div>
-      <div class="work-grid">
+
+        <!-- FOTO 1 -->
         <div class="work-item">
           <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Preparación de superficie">
           <p>Preparación de la superficie</p>
         </div>
+
+        <!-- FOTO 2 -->
         <div class="work-item">
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800" alt="Aplicación de material">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800" alt="Aplicación de mezcla">
           <p>Aplicación de mezcla</p>
         </div>
+
+        <!-- FOTO 3 -->
         <div class="work-item">
           <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=800" alt="Detalle de terminación">
           <p>Pulido y detalles finales</p>
