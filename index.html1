@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z.R Piscinas | Revestimiento & Construcción</title>
+  <!-- Fuentes elegantes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #f5f4ef;
+      --card-bg: #e8e6df;
+      --accent-turq: #5edcdb;
+      --dark-green: #3a473f;
+      --text-dark: #2b2b2b;
+      --white: #ffffff;
+      --border-accent: #c2b59b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 25px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 30px;
+      margin-bottom: 30px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--text-dark);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-user-photo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent-turq);
+    }
+
+    .btn-contact {
+      background-color: var(--dark-green);
+      color: var(--white);
+      padding: 10px 22px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      opacity: 0.9;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+                  url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1200&auto=format&fit=crop') center/cover;
+      height: 70vh;
+      border-radius: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--white);
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.8rem;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      max-width: 600px;
+      margin-bottom: 25px;
+    }
+
+    /* Sección Características */
+    .features-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .features-section h2, .how-we-work-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: var(--dark-green);
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 30px 20px;
+      border-radius: 25px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--dark-green);
+    }
+
+    /* --- SECCIÓN ¿CÓMO TRABAJAMOS? --- */
+    .how-we-work-section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Grilla con 3 fotos + 1 video */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .work-item {
+      background-color: var(--card-bg);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .work-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .work-item img, .work-item video {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .work-item p {
+      padding: 15px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--dark-green);
+    }
+
+    /* Video Fijo de Revestimiento + Tarjeta explicativa */
+    .how-we-work-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    /* Marco del Video Vertical Fijo */
+    .video-frame {
+      width: 280px;
+      height: 480px;
+      border: 3px solid var(--border-accent);
+      border-radius: 24px;
+      padding: 6px;
+      background-color: transparent;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    /* Tarjeta lateral descriptiva */
+    .info-card-side {
+      flex: 1;
+      min-width: 280px;
+      max-width: 520px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 40px 35px;
+      border-radius: 28px;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .info-card-side h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--dark-green);
+      margin-bottom: 15px;
+    }
+
+    .info-card-side p {
+      font-size: 1rem;
+      color: #4a4a4a;
+      line-height: 1.7;
+    }
+
+    /* Sección WhatsApp / Cierre */
+    .cta-container {
+      background-color: var(--dark-green);
+      color: var(--white);
+      border-radius: 30px;
+      padding: 50px 20px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .cta-container h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-wp {
+      display: inline-block;
+      background-color: var(--accent-turq);
+      color: var(--text-dark);
+      padding: 14px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Z.R Piscinas Logo" class="header-logo">
+      <span class="logo-text">Z.R PISCINAS</span>
+    </div>
+
+    <div class="header-right">
+      <img src="foto_perfil.jpg" alt="Perfil" class="header-user-photo">
+      <a href="https://wa.me/543487589652" class="btn-contact" target="_blank">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Z.R Piscinas</h1>
+      <p>Revestimiento de mármol pulido para el interior de piscinas</p>
+      <a href="https://wa.me/543487589652" class="btn-wp" target="_blank">Consultar Presupuesto</a>
+    </section>
+
+    <section class="features-section">
+      <h2>¿Por qué elegir Z.R?</h2>
+      <div class="grid-cards">
+        <div class="card">
+          <h3>Larga Durabilidad</h3>
+          <p>Materiales resistentes diseñados para el agua y el sol.</p>
+        </div>
+        <div class="card">
+          <h3>Fácil Aplicado</h3>
+          <p>Técnica eficiente para renovar o construir tu piscina.</p>
+        </div>
+        <div class="card">
+          <h3>Sin Juntas</h3>
+          <p>Superficie continua, suave al tacto y sin uniones molestas.</p>
+        </div>
+        <div class="card">
+          <h3>Mármol Pulido</h3>
+          <p>Acabado estético y sofisticado de alta gama.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿CÓMO TRABAJAMOS? -->
+    <section class="how-we-work-section">
+      <h2>¿Cómo trabajamos?</h2>
+      
+      <!-- 1. GRILLA CON 3 FOTOS Y 1 VIDEO -->
+      <div class="work-grid">
+        <div class="work-item">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Preparación de superficie">
+          <p>Preparación de la superficie</p>
+        </div>
+        <div class="work-item">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800" alt="Aplicación de material">
+          <p>Aplicación de mezcla</p>
+        </div>
+        <div class="work-item">
+          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=800" alt="Detalle de terminación">
+          <p>Pulido y detalles finales</p>
+        </div>
+        <div class="work-item">
+          <video controls poster="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=800">
+            <source src="video_muestra.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <p>Muestra de avance en obra</p>
+        </div>
+      </div>
+
+      <!-- 2. SECCIÓN FIJA DE PROCESO DE REVESTIMIENTO CON VIDEO VERTICAL -->
+      <div class="how-we-work-container">
+        <div class="video-frame">
+          <video controls poster="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=800">
+            <source src="video_revestimiento.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+        </div>
+
+        <div class="info-card-side">
+          <h3>Proceso de Revestimiento</h3>
+          <p>
+            Realizamos la preparación de la superficie, la aplicación del material y el pulido fino para lograr la textura suave única del mármol pulido.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-container">
+      <h2>Transformá tu piscina hoy</h2>
+      <p>Asesoramiento personalizado y presupuestos sin cargo</p>
+      <a href="https://wa.me/543487589652" class="btn-wp" target="_blank">WhatsApp: 3487 589652</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Z.R Piscinas — Construcción & Revestimiento</p>
+  </footer>
+
+</body>
+</html>
