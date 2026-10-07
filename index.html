@@ -17,6 +17,7 @@
       --dark-green: #3a473f;
       --text-dark: #2b2b2b;
       --white: #ffffff;
+      --border-accent: #c2b59b;
     }
 
     * {
@@ -37,11 +38,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
-      background: rgba(255, 255, 255, 0.8);
+      padding: 12px 25px;
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(8px);
       border-radius: 30px;
       margin-bottom: 30px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     .logo-text {
@@ -50,6 +64,20 @@
       font-weight: 600;
       letter-spacing: 2px;
       color: var(--text-dark);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-user-photo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent-turq);
     }
 
     .btn-contact {
@@ -104,10 +132,11 @@
       padding: 40px 20px;
     }
 
-    .features-section h2, .gallery-section h2 {
+    .features-section h2, .gallery-section h2, .how-we-work-section h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 30px;
+      color: var(--dark-green);
     }
 
     .grid-cards {
@@ -136,7 +165,7 @@
       color: var(--dark-green);
     }
 
-    /* --- SECCIÓN DE GALERÍA Y PROCESO --- */
+    /* --- SECCIÓN TRABAJOS TERMINADOS --- */
     .gallery-section {
       text-align: center;
       padding: 40px 20px;
@@ -144,14 +173,6 @@
       margin: 0 auto;
     }
 
-    .sub-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      margin: 40px 0 20px 0;
-      color: var(--dark-green);
-    }
-
-    /* Grilla Trabajos Terminados (3 Columnas) */
     .finished-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -184,61 +205,67 @@
       color: var(--dark-green);
     }
 
-    /* Video Vertical Centrado */
-    .video-vertical-container {
-      max-width: 380px;
-      margin: 40px auto;
-      background-color: var(--card-bg);
+    /* --- SECCIÓN ¿CÓMO TRABAJAMOS? (ESTILO REF) --- */
+    .how-we-work-section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .how-we-work-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    /* Marco elegante del Video Vertical */
+    .video-frame {
+      width: 280px;
+      height: 480px;
+      border: 3px solid var(--border-accent);
+      border-radius: 24px;
+      padding: 6px;
+      background-color: transparent;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    /* Tarjeta lateral descriptiva */
+    .info-card-side {
+      flex: 1;
+      min-width: 280px;
+      max-width: 520px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 40px 35px;
       border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
 
-    .video-vertical-container video {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .video-vertical-container p {
-      padding: 15px;
-      font-size: 0.95rem;
-      font-weight: 500;
+    .info-card-side h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
       color: var(--dark-green);
+      margin-bottom: 15px;
     }
 
-    /* Grilla de Proceso (2 Columnas) */
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .process-card {
-      background-color: var(--card-bg);
-      border-radius: 25px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-
-    .process-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .process-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .process-card p {
-      padding: 15px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--dark-green);
+    .info-card-side p {
+      font-size: 1rem;
+      color: #4a4a4a;
+      line-height: 1.7;
     }
 
     /* Sección WhatsApp / Cierre */
@@ -279,8 +306,15 @@
 <body>
 
   <header>
-    <div class="logo-text">Z.R PISCINAS</div>
-    <a href="https://wa.me/543487589652" class="btn-contact" target="_blank">Contacto</a>
+    <div class="logo-container">
+      <img src="logo.png" alt="Z.R Piscinas Logo" class="header-logo">
+      <span class="logo-text">Z.R PISCINAS</span>
+    </div>
+
+    <div class="header-right">
+      <img src="foto_perfil.jpg" alt="Perfil" class="header-user-photo">
+      <a href="https://wa.me/543487589652" class="btn-contact" target="_blank">Contacto</a>
+    </div>
   </header>
 
   <main>
@@ -291,83 +325,4 @@
     </section>
 
     <section class="features-section">
-      <h2>¿Por qué elegir Z.R?</h2>
-      <div class="grid-cards">
-        <div class="card">
-          <h3>Larga Durabilidad</h3>
-          <p>Materiales resistentes diseñados para el agua y el sol.</p>
-        </div>
-        <div class="card">
-          <h3>Fácil Aplicado</h3>
-          <p>Técnica eficiente para renovar o construir tu piscina.</p>
-        </div>
-        <div class="card">
-          <h3>Sin Juntas</h3>
-          <p>Superficie continua, suave al tacto y sin uniones molestas.</p>
-        </div>
-        <div class="card">
-          <h3>Mármol Pulido</h3>
-          <p>Acabado estético y sofisticado de alta gama.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== GALERÍA & PROCESO ==================== -->
-    <section class="gallery-section">
-      <h2>Nuestros Trabajos</h2>
-
-      <!-- 1. 3 TRABAJOS TERMINADOS -->
-      <div class="finished-grid">
-        <div class="finished-card">
-          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=800" alt="Revestimiento celeste Cancún">
-          <p>Revestimiento celeste Cancún</p>
-        </div>
-        <div class="finished-card">
-          <img src="https://images.unsplash.com/photo-1562778612-e1e0cda9915c?q=80&w=800" alt="Piscina terminada">
-          <p>Piscina de mármol pulido terminada</p>
-        </div>
-        <div class="finished-card">
-          <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?q=80&w=800" alt="Detalle de agua y bordes">
-          <p>Detalle de terminación suave al tacto</p>
-        </div>
-      </div>
-
-      <!-- 2. VIDEO VERTICAL DESTACADO -->
-      <div class="video-vertical-container">
-        <!-- Reemplazá 'tu_video.mp4' por tu archivo o link de video vertical -->
-        <video controls poster="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?q=80&w=800">
-          <source src="tu_video.mp4" type="video/mp4">
-          Tu navegador no soporta videos HTML5.
-        </video>
-        <p>Video del proceso y acabado final</p>
-      </div>
-
-      <!-- 3. EL PROCESO (PASO A PASO) -->
-      <h3 class="sub-title">El Proceso de Trabajo</h3>
-      <div class="process-grid">
-        <div class="process-card">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Desmantelamiento de pintura">
-          <p>Desmantelamiento de pintura previa</p>
-        </div>
-        <div class="process-card">
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800" alt="Aplicado de mezcla y listo para el pulido">
-          <p>Aplicado de mezcla & listo para el pulido</p>
-        </div>
-      </div>
-
-    </section>
-    <!-- ========================================================== -->
-
-    <section class="cta-container">
-      <h2>Transformá tu piscina hoy</h2>
-      <p>Asesoramiento personalizado y presupuestos sin cargo</p>
-      <a href="https://wa.me/543487589652" class="btn-wp" target="_blank">WhatsApp: 3487 589652</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Z.R Piscinas — Construcción & Revestimiento</p>
-  </footer>
-
-</body>
-</html>
+      <h2>¿Por qué
